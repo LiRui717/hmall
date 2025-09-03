@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: 10.41.5.44:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-log.yaml
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true
+
